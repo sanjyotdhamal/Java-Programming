@@ -6,6 +6,8 @@
 //5. Delete the EMP from the end 
 //6. Display the employee details in reverse order of inseration package com.mit.list;
 
+package com.mit.list;
+
 public class PerformOperationsOnDoublyLL {
 
     public static void main(String[] args) {
@@ -37,14 +39,14 @@ public class PerformOperationsOnDoublyLL {
     }
 }
 
-class EmployeeNode {
+class EmployeeNode2 {
 
     int id;
     String name;
-    EmployeeNode prev;
-    EmployeeNode next;
+    EmployeeNode2 prev;
+    EmployeeNode2 next;
 
-    public EmployeeNode(int id, String name) {
+    public EmployeeNode2(int id, String name) {
         this.id = id;
         this.name = name;
         this.prev = null;
@@ -54,13 +56,13 @@ class EmployeeNode {
 
 class EmployeeDLL {
 
-    EmployeeNode head = null;
-    EmployeeNode tail = null;
+    EmployeeNode2 head = null;
+    EmployeeNode2 tail = null;
 
-    // Onboard Employee
+    // 1. Onboard Employee
     public void onboard(int id, String name) {
 
-        EmployeeNode emp = new EmployeeNode(id, name);
+        EmployeeNode2 emp = new EmployeeNode2(id, name);
 
         if (head == null) {
             head = emp;
@@ -72,10 +74,10 @@ class EmployeeDLL {
         }
     }
 
-    // Display Employees
+    // 2. Display Employees
     public void display() {
 
-        EmployeeNode temp = head;
+        EmployeeNode2 temp = head;
 
         while (temp != null) {
             System.out.println("ID: " + temp.id + " Name: " + temp.name);
@@ -83,10 +85,10 @@ class EmployeeDLL {
         }
     }
 
-    // Update Employee by ID
+    // 3. Update Employee by ID
     public void update(int id, String newName) {
 
-        EmployeeNode temp = head;
+        EmployeeNode2 temp = head;
 
         while (temp != null) {
 
@@ -102,28 +104,35 @@ class EmployeeDLL {
         System.out.println("Employee Not Found");
     }
 
-    // Offboard Employee by ID
+    // 4. Offboard Employee by ID
     public void offboard(int id) {
 
-        EmployeeNode temp = head;
+        EmployeeNode2 temp = head;
 
         while (temp != null) {
 
             if (temp.id == id) {
 
                 if (temp == head) {
+
                     head = head.next;
+
                     if (head != null) {
-						head.prev = null;
-					}
-                }
+                        head.prev = null;
+                    } else {
+                        tail = null;
+                    }
 
-                else if (temp == tail) {
+                } else if (temp == tail) {
+
                     tail = tail.prev;
-                    tail.next = null;
-                }
 
-                else {
+                    if (tail != null) {
+                        tail.next = null;
+                    }
+
+                } else {
+
                     temp.prev.next = temp.next;
                     temp.next.prev = temp.prev;
                 }
@@ -138,7 +147,7 @@ class EmployeeDLL {
         System.out.println("Employee Not Found");
     }
 
-    // Delete Employee from End
+    // 5. Delete Employee From End
     public void deleteFromEnd() {
 
         if (tail == null) {
@@ -156,10 +165,10 @@ class EmployeeDLL {
         tail.next = null;
     }
 
-    // Display in Reverse Order
+    // 6. Display Reverse Order
     public void displayReverse() {
 
-        EmployeeNode temp = tail;
+        EmployeeNode2 temp = tail;
 
         while (temp != null) {
             System.out.println("ID: " + temp.id + " Name: " + temp.name);
