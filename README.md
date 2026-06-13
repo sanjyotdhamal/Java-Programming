@@ -8,20 +8,19 @@
 
 ```
 src/
-├── HotelCatalogue.java                    ← Standalone console app
 └── com/mit/
+    ├── array/                             → Arrays (1D, 2D, Jagged)
     ├── first/                             → Java Basics & Operators
-    ├── placement/conditional/             → Control Flow
+    └── graph/                             → Graph Algorithms (BFS, DFS)
+    ├── hashing/                           → Hashing & HashSets
+    ├── list/                              → Linked Lists
     ├── loops/                             → Loops & Patterns
     ├── MethodDemo/                        → Methods & User Input
-    ├── array/                             → Arrays (1D, 2D, Jagged)
+    ├── placement/conditional/             → Control Flow
+    ├── queue/                             → Queue Implementations
     ├── searching/                         → Searching, Sorting & Backtracking
     ├── stack/                             → Stack Implementations
-    ├── queue/                             → Queue Implementations
-    ├── list/                              → Linked Lists
-    ├── hashing/                           → Hashing & HashSets
     ├── tree/                              → Binary Trees & Traversals
-    └── graph/                             → Graph Algorithms (BFS, DFS)
 ```
 
 ---
