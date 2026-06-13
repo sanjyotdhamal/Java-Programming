@@ -1,33 +1,37 @@
 //wap to store any formate of data in linked list with 2 node
 
 package com.mit.list;
+
+class Node {
+
+    String name;
+    int age;
+    Node next;
+
+    Node(String name, int age) {
+        this.name = name;
+        this.age = age;
+        this.next = null;
+    }
+}
+
 public class Store2Node {
-	    String name;
-	    int age;
-	    Store2Node next;
 
-	    Store2Node(String name, int age) {
-	        this.name = name;
-	        this.age = age;
-	        this.next = null;
-	    }
-	}
+    public static void main(String[] args) {
 
-	public class Store2Node {
+        Node node1 = new Node("Sanjyot", 20);
+        Node node2 = new Node("Pratik", 21);
 
-	    public static void main(String[] args) {
+        node1.next = node2;
 
-	        Node node1 = new Node("Sanjyot", 20);
-	        Node node2 = new Node("Pratik", 21);
+        Node temp = node1;
 
-	        node1.next = node2;
+        while (temp != null) {
 
-	        Node temp = node1;
+            System.out.println("Name: " + temp.name);
+            System.out.println("Age: " + temp.age);
 
-	        while (temp != null) {
-	            System.out.println("Name: " + temp.name);
-	            System.out.println("Age: " + temp.age);
-	            temp = temp.next;
-	        }
-	    }
-	}
+            temp = temp.next;
+        }
+    }
+}
