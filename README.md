@@ -7,20 +7,21 @@
 ## 📁 Repository Structure
 
 ```
-src/
-└── com/mit/
-    ├── array/                             → Arrays (1D, 2D, Jagged)
-    ├── first/                             → Java Basics & Operators
-    └── graph/                             → Graph Algorithms (BFS, DFS)
-    ├── hashing/                           → Hashing & HashSets
-    ├── list/                              → Linked Lists
-    ├── loops/                             → Loops & Patterns
-    ├── MethodDemo/                        → Methods & User Input
-    ├── placement/conditional/             → Control Flow
-    ├── queue/                             → Queue Implementations
-    ├── searching/                         → Searching, Sorting & Backtracking
-    ├── stack/                             → Stack Implementations
-    ├── tree/                              → Binary Trees & Traversals
+JavaTraining26
+    └──src/
+        └── com/mit/
+            ├── array/                             → Arrays (1D, 2D, Jagged)
+            ├── first/                             → Java Basics & Operators
+            ├── graph/                             → Graph Algorithms (BFS, DFS)
+            ├── hashing/                           → Hashing & HashSets
+            ├── list/                              → Linked Lists
+            ├── loops/                             → Loops & Patterns
+            ├── MethodDemo/                        → Methods & User Input
+            ├── placement/conditional/             → Control Flow
+            ├── queue/                             → Queue Implementations
+            ├── searching/                         → Searching, Sorting & Backtracking
+            ├── stack/                             → Stack Implementations
+            ├── tree/                              → Binary Trees & Traversals
 ```
 
 ---
